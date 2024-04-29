@@ -50,15 +50,16 @@ class Menu(ABC):
 
 class WindowsButton(Button):
     def paint(self):
-        print("WindowsButton")
+        print("Windows button here")
 
-class MacOSButton(Button):
-    def paint(self):
-        print("MacOSButton")
 
 class LinuxButton(Button):
     def paint(self):
-        print("LinuxButton")
+        print("Linux button here")
+
+class MacOSButton(Button):
+    def paint(self):
+        print("MacOS button here")
 
 class WindowsMenu(Menu):
     def paint(self):
@@ -79,3 +80,5 @@ def application_layout(factory):
     menu.paint()
 
 application_layout(WindowsFactory())
+application_layout(MacOSFactory())
+application_layout(LinuxFactory())
