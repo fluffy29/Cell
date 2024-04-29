@@ -8,7 +8,6 @@ on the concrete classes of the components, neither on the OS.
 
 from abc import ABC, abstractmethod
 
-# Abstract factory class
 class GUIFactory(ABC):
     @abstractmethod
     def create_button(self):
@@ -18,7 +17,6 @@ class GUIFactory(ABC):
     def create_menu(self):
         pass
 
-# Concrete factory classes for each OS
 class WindowsFactory(GUIFactory):
     def create_button(self):
         return WindowsButton()
